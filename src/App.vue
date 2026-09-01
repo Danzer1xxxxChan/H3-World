@@ -6,10 +6,10 @@ const paper = { title:'H3-World:', subtitle:'Turning Language Understanding into
 const authors = [{name:'Danze Chen',mark:'1,2,♣'},{name:'Zeqing Wang',mark:'1,2,♣'},{name:'Ziyue Lin',mark:'3'},{name:'Xingyi Yang',mark:'3,*'},{name:'Yeying Jin',mark:'1,2,*,♦'}]
 const links = [{label:'Project',icon:'↗',href:'https://github.com/Danzer1xxxxChan/H3-World'},{label:'GitHub',icon:'⌘',href:'https://github.com/Danzer1xxxxChan/H3-World'},{label:'Hugging Face',icon:'☺',href:'https://huggingface.co/DANNY621/H3-World'}]
 const demos = [
-  {label:'Neon alley',note:'First-person forward control in a neon-lit city.',video:'demos/katana-neon-alley-forward.mp4'},
-  {label:'Lantern cave',note:'First-person exploration in a complex cave environment.',video:'demos/lantern-cave-forward.mp4'},
-  {label:'Dune oasis',note:'Third-person navigation across an open desert scene.',video:'demos/dune-oasis-forward.mp4'},
-  {label:'Cathedral paladin',note:'Third-person forward motion in a detailed fantasy interior.',video:'demos/cathedral-paladin-forward.mp4'}
+  {label:'Neon alley · fast pan right',note:'First-person camera control in a neon-lit city.',video:'demos/katana-neon-alley-forward.mp4'},
+  {label:'Lantern cave · strafe left',note:'First-person lateral movement in a complex cave environment.',video:'demos/lantern-cave-forward.mp4'},
+  {label:'Dune oasis · strafe right',note:'Third-person lateral navigation across an open desert scene.',video:'demos/dune-oasis-forward.mp4'},
+  {label:'Cathedral paladin · tilt up',note:'Third-person upward camera motion in a detailed fantasy interior.',video:'demos/cathedral-paladin-forward.mp4'}
 ]
 const bibtex = `@misc{chen2026h3world,
   title     = {H3-World: Turning Language Understanding into World Control},
