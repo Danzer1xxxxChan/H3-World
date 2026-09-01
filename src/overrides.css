@@ -1,5 +1,6 @@
 /* Readability and embedded PDF figure refinements. */
 body{font-size:17px}
+h1 em{display:block;font:inherit}
 .summary{font-size:18px}
 .authors{font-size:17px}
 .affiliations{font-size:14px}
