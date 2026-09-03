@@ -5,6 +5,7 @@ H3-World is the **first interactive world model** built on [MiniMax-H3](https://
 <a href="https://arxiv.org/abs/2609.01560"><img src="https://img.shields.io/badge/arXiv-H3--World-A42C25.svg" alt="arXiv"></a>
 <a href="https://huggingface.co/DANNY621/H3-World"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-ffbd45.svg" alt="Hugging Face model"></a>
 <a href="https://danzer1xxxxchan.github.io/H3-World"><img src="https://img.shields.io/badge/Web-Project%20Page-1d72b8.svg" alt="Project page"></a>
+<a href="https://modelscope.cn/models/DANNY621/H3-World"><img src="https://img.shields.io/badge/ModelScope-H3--World-purple?logo=modelscope" alt="ModelScope"></a>
 
 https://github.com/user-attachments/assets/1c862995-8809-447e-bade-2c47bfdb2738
 
