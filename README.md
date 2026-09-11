@@ -20,7 +20,8 @@ Tested with Python 3.10 and CUDA 12.8.
 ```bash
 conda create -n minimax_h3 python=3.10 -y
 conda activate minimax_h3
-pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cu128
+pip install torch==2.10.0 torchvision==0.25.0 torchaudio==2.10.0 \
+  --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
 
 # Use the exact DiffSynth revision and the H3-World attention patch.
@@ -31,6 +32,18 @@ git -C DiffSynth-Studio-h3-v2 apply ../code/diffsynth_h3_action.patch
 # Keep Hugging Face, Torch, and Triton caches inside this repository.
 source env.sh
 ```
+
+If `DiffSynth-Studio-h3-v2` already contains downloaded model weights, `git clone` will refuse to use the non-empty directory. Initialize the checkout in place instead:
+
+```bash
+git -C DiffSynth-Studio-h3-v2 init
+git -C DiffSynth-Studio-h3-v2 remote add origin https://github.com/modelscope/DiffSynth-Studio.git
+git -C DiffSynth-Studio-h3-v2 fetch --depth 1 origin "$(cat code/diffsynth_base_commit.txt)"
+git -C DiffSynth-Studio-h3-v2 checkout --detach FETCH_HEAD
+git -C DiffSynth-Studio-h3-v2 apply ../code/diffsynth_h3_action.patch
+```
+
+Run `git -C DiffSynth-Studio-h3-v2 remote add origin ...` only when the directory does not already have an `origin` remote.
 
 Download the required weights into the following locations:
 
@@ -109,6 +122,16 @@ bash code/train.sh
 ```
 
 `code/train.sh` uses rank-32 LoRA on `qkv_proj` and `out_proj` for 20 epochs, saving checkpoints every 2,000 steps. Override the visible devices with `CUDA_VISIBLE_DEVICES=4,5,6,7 bash code/train.sh`.
+
+## 📄 License
+
+The source code in this repository is licensed under the [Apache License 2.0](LICENSE), except where otherwise noted.
+
+`code/diffsynth_h3_action.patch` contains modifications to [DiffSynth-Studio](https://github.com/modelscope/DiffSynth-Studio), which is distributed under the Apache License 2.0.
+
+`examples/first_frame.png` is derived from the [ABot-World-Explorer-500h](https://huggingface.co/datasets/acvlab/ABot-World-Explorer-500h) dataset and remains subject to its Apache License 2.0.
+
+The H3-World LoRA checkpoint is not covered by this source-code license. It is a Model Derivative of MiniMax-H3 and is distributed subject to the [MiniMax H3 Community License Agreement](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE). Use, modification, redistribution, and deployment of the checkpoint and resulting model must comply with that agreement.
 
 ## 🙏 Acknowledgements
 
