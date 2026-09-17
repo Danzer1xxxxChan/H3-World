@@ -152,3 +152,6 @@ The H3-World LoRA checkpoint is not covered by this source-code license. It is a
       url={https://arxiv.org/abs/2609.01560},
 }
 ```
+
+If you find this project helpful, a star ⭐ would be greatly appreciated!
+<a href="https://star-history.com/#Danzer1xxxxChan/H3-World&Date"><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Danzer1xxxxChan/H3-World&type=Date"></a>
